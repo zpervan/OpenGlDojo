@@ -1,0 +1,6 @@
+workspace(name = "GLEW")
+
+local_repository(
+    name = "GLFW",
+    path = "../ThirdParty/glfw-3.3.5/",
+)

@@ -1,0 +1,24 @@
+name: Ubuntu
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_and_run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo chmod +x "${GITHUB_WORKSPACE}/Scripts/install_ubuntu.sh"
+          sudo "${GITHUB_WORKSPACE}/Scripts/install_ubuntu.sh"
+
+      - name: Build Project | All
+        run: |
+          bazel build //... --config=linux -c dbg
+          bazel build //... --config=linux -c opt

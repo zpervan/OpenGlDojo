@@ -1,0 +1,32 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "glm",
+    srcs = glob([
+        "*.hpp",
+        "detail/*",
+        "ext/*",
+        "gtc/*",
+        "gtx/*",
+        "simd/*",
+    ]),
+    hdrs = glob([
+        "*.hpp",
+        "detail/*",
+        "ext/*",
+        "gtc/*",
+        "gtx/*.",
+        "simd/*",
+    ]),
+    include_prefix = "ThirdParty/GLM",
+    includes = [
+        ".",
+        "detail",
+        "ext",
+        "gtc",
+        "gtx",
+        "simd",
+    ],
+)

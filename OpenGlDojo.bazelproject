@@ -1,0 +1,15 @@
+derive_targets_from_directories: true
+
+directories:
+  .
+  -.clwb
+  -.vscode
+  -bazel-bin
+  -bazel-out
+  -bazel-plotingZ
+  -bazel-testlogs
+
+targets:
+  -@GLEW//...
+  -@GLFW//...
+  -@GLM//...
