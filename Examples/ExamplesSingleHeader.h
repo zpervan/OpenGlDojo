@@ -1,0 +1,7 @@
+#ifndef OPENGLDOJO_EXAMPLESSINGLEHEADER_H
+#define OPENGLDOJO_EXAMPLESSINGLEHEADER_H
+
+#include "00_CreateWindow.h"
+#include "01_BasicShape.h"
+
+#endif  // OPENGLDOJO_EXAMPLESSINGLEHEADER_H
