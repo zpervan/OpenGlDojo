@@ -1,5 +1,5 @@
-#ifndef OPENGLDOJO_01_BASICSHAPE_H
-#define OPENGLDOJO_01_BASICSHAPE_H
+#ifndef OPENGLDOJO_010_BASICSHAPE_H
+#define OPENGLDOJO_010_BASICSHAPE_H
 
 #include "ThirdParty/glad/glad.h"
 #include "ThirdParty/GLFW/glfw3.h"
@@ -27,7 +27,7 @@ const char *fragmentShaderSource = "#version 330 core\n"
     "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
     "}\n\0";
 
-int _01_BasicShape()
+int _010_BasicShape()
 {
     // glfw: initialize and configure
     // ------------------------------
@@ -176,4 +176,4 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-#endif  // OPENGLDOJO_01_BASICSHAPE_H
+#endif  // OPENGLDOJO_010_BASICSHAPE_H

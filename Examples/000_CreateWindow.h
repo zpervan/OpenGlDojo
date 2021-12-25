@@ -1,6 +1,5 @@
-#ifndef OPENGLDOJO_00_CREATEWINDOW_H
-#define OPENGLDOJO_00_CREATEWINDOW_H
-
+#ifndef OPENGLDOJO_000_CREATEWINDOW_H
+#define OPENGLDOJO_000_CREATEWINDOW_H
 
 #include <iostream>
 
@@ -15,7 +14,7 @@ void processInput(GLFWwindow* window)
     }
 }
 
-void _00_CreateWindow()
+void _000_CreateWindow()
 {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -58,4 +57,4 @@ void _00_CreateWindow()
     glfwTerminate();
 }
 
-#endif  // OPENGLDOJO_00_CREATEWINDOW_H
+#endif  // OPENGLDOJO_000_CREATEWINDOW_H

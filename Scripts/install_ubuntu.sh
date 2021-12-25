@@ -25,4 +25,5 @@ apt install -y build-essential \
                extra-cmake-modules \
                xorg-dev \
                libglu1-mesa-dev \
-               libgl-dev
+               libgl-dev \
+               freeglut3-dev
