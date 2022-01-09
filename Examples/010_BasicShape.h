@@ -112,20 +112,44 @@ int _010_BasicShape()
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
     glBindVertexArray(0);
 
+    float R, G, B = 0;
+    bool positive_direction{true};
 
-    // uncomment this call to draw in wireframe polygons.
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    // render loop
-    // -----------
+    //    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    // Rendering loop
     while (!glfwWindowShouldClose(window))
     {
-        // input
-        // -----
+        // Input
         processInput(window);
 
-        // render
-        // ------
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        // Pulsating background
+        if (positive_direction)
+        {
+            R += 0.01;
+            G += 0.01;
+            B += 0.01;
+        }
+        else
+        {
+            R -= 0.01;
+            G -= 0.01;
+            B -= 0.01;
+        }
+
+        if (R >= 1.0f || G >= 1.0f || B >= 1.0f)
+        {
+            std::cout << "Positive direction: false" << std::endl;
+            positive_direction = false;
+        }
+
+        if (R <= 0.0f || G <= 0.0f || B <= 0.0f)
+        {
+            std::cout << "Positive direction: true" << std::endl;
+            positive_direction = true;
+        }
+
+        // Rendering
+        glClearColor(R, G, B, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         // draw our first triangle
